@@ -1,0 +1,10 @@
+
+<h1>All Subs!</h1>
+<%= link_to "Create Sub", new_sub_url %>
+<br>
+<br>
+<% @subs.each do |sub| %>
+  <%= link_to sub.title, sub_url(sub.id) %>
+  <%= button_to "Delete Sub", sub_url(sub.id), method: :delete %>
+  <br>
+<% end %>
